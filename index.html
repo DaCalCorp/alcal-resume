@@ -400,20 +400,14 @@
   }
 
   .innovation-image {
+    display: block;
     width: 100%;
+    height: auto;
     margin-top: 1rem;
     border-radius: 4px;
     border: 1px solid var(--rule);
-    display: block;
   }
-.innovation-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  border-radius: 4px;
-  border: 1px solid var(--rule);
-}
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -457,6 +451,7 @@
 
   .edu-name { font-size: 0.95rem; font-weight: 500; color: var(--ink); }
   .edu-detail { font-size: 0.85rem; color: var(--ink-light); margin-top: 0.15rem; }
+
   .edu-badge {
     font-size: 0.68rem;
     letter-spacing: 0.08em;
@@ -527,7 +522,10 @@
     border: 1px solid rgba(255,255,255,0.4);
   }
 
-  .contact-btn-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+  .contact-btn-outline:hover {
+    border-color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.08);
+  }
 
   .contact-divider {
     width: 40px;
@@ -545,9 +543,17 @@
     text-align: left;
   }
 
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
 
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
 
   .form-label {
     font-size: 0.72rem;
@@ -570,13 +576,18 @@
     width: 100%;
   }
 
-  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-input::placeholder, .form-textarea::placeholder {
+    color: rgba(255,255,255,0.3);
+  }
 
   .form-input:focus, .form-textarea:focus {
     border-color: rgba(255,255,255,0.7);
   }
 
-  .form-textarea { resize: vertical; min-height: 110px; }
+  .form-textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
 
   .form-submit {
     font-family: var(--font-body);
@@ -642,7 +653,7 @@
     <li><a href="#innovations">Innovations</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://img1.wsimg.com/blobby/go/a7b8f23f-ba2d-41a7-b976-4687a4eed5fe/downloads/c94dd049-ef05-408a-a3d0-568abb3a6ea1/AlCalResDir.pdf" target="_blank" class="nav-download">Download Resume</a>
+  <a href="/resume/AcalResDir.pdf" target="_blank" download class="nav-download">Download Resume</a>
 </nav>
 
 <section id="hero">
@@ -785,55 +796,59 @@
     <div class="innovations-grid">
 
       <div class="innovation-card fade-in">
-  <div class="innovation-tag">Operations</div>
-  <div class="innovation-title">The Microscope, Real Time SLA Dashboard</div>
-  <div class="innovation-desc">
-    Built with Google App Script. Became the team's primary performance management tool. Drove 10% SLA improvement and 13% faster incident response.
-  </div>
-  <img src="images/Content-Creator-Project.png" alt="The Microscope dashboard example" class="innovation-image">
-</div>
-      <div class="innovation-card fade-in">
-  <div class="innovation-tag">Analytics</div>
-  <div class="innovation-title">Automated Team Workload Analysis</div>
-  <div class="innovation-desc">
-    Google App Script + Sheets tool that tracked work type per engineer, surfaced cherry picking patterns, and revealed a 15% imbalance in bug fix distribution across the team.
-  </div>
-  <img src="images/workload.png" alt="Team workload analysis dashboard" class="innovation-image">
-</div>
-      <div class="innovation-card fade-in">
-  <div class="innovation-tag">Infrastructure</div>
-  <div class="innovation-title">API Driven CDN Benchmarking</div>
-  <div class="innovation-desc">
-    Built an API to automate retrieval of CDN response time data, then benchmarked performance against top competitors, directly initiating projects for image compression and caching improvements.
-  </div>
-  <img src="images/CDNBench.png" alt="CDN benchmarking performance comparison" class="innovation-image">
-</div>
-      <div class="innovation-card fade-in">
-  <div class="innovation-tag">Network Ops</div>
-  <div class="innovation-title">Server Uptime Automation</div>
-  <div class="innovation-desc">
-    API driven collection of global server status data, aggregated by region and data center. Identified underperforming locations and drove a 15% reduction in overall server downtime.
-  </div>
-  <img src="images/network-uptime.png" alt="Global server uptime analysis" class="innovation-image">
-</div>
+        <div class="innovation-tag">Operations</div>
+        <div class="innovation-title">The Microscope, Real Time SLA Dashboard</div>
+        <div class="innovation-desc">
+          Built with Google App Script. Became the team's primary performance management tool. Drove 10% SLA improvement and 13% faster incident response.
+        </div>
+        <img src="images/Content-Creator-Project.png" alt="The Microscope dashboard example" class="innovation-image">
+      </div>
 
       <div class="innovation-card fade-in">
-  <div class="innovation-tag">AI & Automation</div>
-  <div class="innovation-title">AI Powered Job Search Pipeline</div>
-  <div class="innovation-desc">
-    Built an end to end system that aggregates roles, evaluates fit against my experience, scores and prioritizes opportunities, and surfaces next actions through a live dashboard, replacing manual job searching.
-  </div>
-  <img src="images/job-dashboard.png" alt="AI job search dashboard" class="innovation-image">
-</div>
+        <div class="innovation-tag">Analytics</div>
+        <div class="innovation-title">Automated Team Workload Analysis</div>
+        <div class="innovation-desc">
+          Google App Script + Sheets tool that tracked work type per engineer, surfaced cherry picking patterns, and revealed a 15% imbalance in bug fix distribution across the team.
+        </div>
+        <img src="images/workload.png" alt="Team workload analysis dashboard" class="innovation-image">
+      </div>
 
-<div class="innovation-card fade-in">
-  <div class="innovation-tag">Intelligence</div>
-  <div class="innovation-title">News Intelligence Automation</div>
-  <div class="innovation-desc">
-    Built a pipeline that ingests news data, classifies sentiment, and surfaces trends for faster decision making. Transforms unstructured articles into structured insights that can be tracked and acted on.
-  </div>
-  <img src="images/News-Analyzer.png" alt="News intelligence sentiment analysis dashboard" class="innovation-image">
-</div>
+      <div class="innovation-card fade-in">
+        <div class="innovation-tag">Infrastructure</div>
+        <div class="innovation-title">API Driven CDN Benchmarking</div>
+        <div class="innovation-desc">
+          Built an API to automate retrieval of CDN response time data, then benchmarked performance against top competitors, directly initiating projects for image compression and caching improvements.
+        </div>
+        <img src="images/CDNBench.png" alt="CDN benchmarking performance comparison" class="innovation-image">
+      </div>
+
+      <div class="innovation-card fade-in">
+        <div class="innovation-tag">Network Ops</div>
+        <div class="innovation-title">Server Uptime Automation</div>
+        <div class="innovation-desc">
+          API driven collection of global server status data, aggregated by region and data center. Identified underperforming locations and drove a 15% reduction in overall server downtime.
+        </div>
+        <img src="images/network-uptime.png" alt="Global server uptime analysis" class="innovation-image">
+      </div>
+
+      <div class="innovation-card fade-in">
+        <div class="innovation-tag">AI & Automation</div>
+        <div class="innovation-title">AI Powered Job Search Pipeline</div>
+        <div class="innovation-desc">
+          Built an end to end system that aggregates roles, evaluates fit against my experience, scores and prioritizes opportunities, and surfaces next actions through a live dashboard, replacing manual job searching.
+        </div>
+        <img src="images/job-dashboard.png" alt="AI job search dashboard" class="innovation-image">
+      </div>
+
+      <div class="innovation-card fade-in">
+        <div class="innovation-tag">Intelligence</div>
+        <div class="innovation-title">News Intelligence Automation</div>
+        <div class="innovation-desc">
+          Built a pipeline that ingests news data, classifies sentiment, and surfaces trends for faster decision making. Transforms unstructured articles into structured insights that can be tracked and acted on.
+        </div>
+        <img src="images/News-Analyzer.png" alt="News intelligence sentiment analysis dashboard" class="innovation-image">
+      </div>
+
     </div>
   </div>
 </section>
@@ -922,13 +937,15 @@
     <div class="section-label">Contact</div>
     <h2 class="fade-in">Need someone who can step in,<br>take ownership, and actually<br>move things forward?</h2>
     <br>
-    
+
     <div class="contact-direct fade-in">
       <a href="mailto:al@alcal.work" class="contact-btn contact-btn-primary">al@alcal.work</a>
       <a href="https://www.linkedin.com/in/al-calderon-87808b4/" target="_blank" class="contact-btn contact-btn-outline">LinkedIn</a>
-      <a href="https://img1.wsimg.com/blobby/go/a7b8f23f-ba2d-41a7-b976-4687a4eed5fe/downloads/c94dd049-ef05-408a-a3d0-568abb3a6ea1/AlCalResDir.pdf" target="_blank" class="contact-btn contact-btn-outline">Download Resume</a>
+      <a href="/resume/AcalResDir.pdf" target="_blank" download class="contact-btn contact-btn-outline">Download Resume</a>
     </div>
+
     <div class="contact-divider"></div>
+
     <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div class="form-group">
@@ -940,6 +957,7 @@
           <input class="form-input" type="text" id="lname" placeholder="Smith">
         </div>
       </div>
+
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="email">Email</label>
@@ -950,10 +968,12 @@
           <input class="form-input" type="text" id="company" placeholder="Acme Corp">
         </div>
       </div>
+
       <div class="form-group">
         <label class="form-label" for="message">Message</label>
         <textarea class="form-textarea" id="message" placeholder="What are you working on?" required></textarea>
       </div>
+
       <button type="submit" class="form-submit" id="submit-btn">Send message</button>
       <p id="form-confirm" style="display:none; font-size:0.88rem; color:rgba(255,255,255,0.7); margin-top:0.5rem; text-align:center;">Message received. I'll get back to you.</p>
     </form>
@@ -965,9 +985,10 @@
   <span class="footer-copy">Support Operations Leader · Austin, TX · © 2026</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
+    entries.forEach((e) => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
         observer.unobserve(e.target);
@@ -975,8 +996,26 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = document.getElementById('submit-b
+
+    const btn = document.getElementById('submit-btn');
+    const confirm = document.getElementById('form-confirm');
+    const form = e.target;
+
+    btn.disabled = true;
+    btn.textContent = 'Message Sent';
+    confirm.style.display = 'block';
+
+    form.reset();
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    }, 2500);
+  }
+</script>
+</body>
+</html>
