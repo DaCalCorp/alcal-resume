@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Calderon | Support Operations Leader | Global Team Scaling | AI and Automation Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAFAF8;
+    --white: #FFFFFF;
+    --ink: #1A1814;
+    --ink-mid: #4A4640;
+    --ink-light: #8A847C;
+    --rule: #EBEBE8;
+    --accent: #2B4D6F;
+    --accent-light: #EBF0F5;
+    --accent-warm: #C17F3B;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(247, 244, 239, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .nav-download {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--accent);
+    padding: 0.45rem 1.1rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-download:hover { background: #1e3a55; }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+  }
+
+  section { padding: 5rem 0; }
+  section + section { border-top: 1px solid var(--rule); }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 1.2rem;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+  }
+
+  #hero {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    border-top: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--accent-warm);
+  }
+
+  .hero-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 4.4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-mid);
+    margin-bottom: 2rem;
+  }
+
+  .hero-body {
+    font-size: 1.05rem;
+    color: var(--ink-mid);
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.8rem;
+    padding: 1.8rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-light);
+    text-transform: uppercase;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--accent);
+    padding: 0.75rem 1.8rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: #1e3a55; }
+
+  .btn-secondary {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+    padding: 0.75rem 1.8rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover { background: var(--accent-light); }
+
+  .metrics-band {
+    background: var(--accent);
+    padding: 3rem clamp(1.5rem, 5vw, 3rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .metric-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .metric-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .summary-text {
+    font-size: 1.08rem;
+    color: var(--ink-mid);
+    line-height: 1.85;
+    max-width: 720px;
+  }
+
+  .summary-text + .summary-text { margin-top: 1.2rem; }
+
+  .expertise-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .pill {
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+    color: var(--ink-mid);
+    background: var(--white);
+  }
+
+  .pill.accent { background: var(--accent-light); border-color: #b8cfe0; color: var(--accent); }
+
+  .job { margin-bottom: 3.5rem; }
+  .job:last-child { margin-bottom: 0; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+  }
+
+  .job-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .job-tenure {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    padding-top: 0.2rem;
+  }
+
+  .job-company {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .job-note {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .job-bullets {
+    list-style: none;
+    padding: 0;
+  }
+
+  .job-bullets li {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    line-height: 1.7;
+    padding: 0.45rem 0 0.45rem 1.3rem;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .job-bullets li:last-child { border-bottom: none; }
+
+  .job-bullets li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-size: 0.85rem;
+  }
+
+  .innovations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .innovation-card {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.4rem 1.6rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .innovation-card:hover {
+    border-color: #b8cfe0;
+    box-shadow: 0 4px 20px rgba(43, 77, 111, 0.08);
+  }
+
+  .innovation-tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 0.6rem;
+  }
+
+  .innovation-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+
+  .innovation-desc {
+    font-size: 0.85rem;
+    color: var(--ink-light);
+    line-height: 1.65;
+  }
+
+  .innovation-image {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+.innovation-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+}
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .skill-group-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .skill-list {
+    list-style: none;
+  }
+
+  .skill-list li {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .skill-list li:last-child { border-bottom: none; }
+
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .edu-item:last-child { border-bottom: none; }
+
+  .edu-name { font-size: 0.95rem; font-weight: 500; color: var(--ink); }
+  .edu-detail { font-size: 0.85rem; color: var(--ink-light); margin-top: 0.15rem; }
+  .edu-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #contact {
+    background: var(--accent);
+    text-align: center;
+  }
+
+  #contact .section-label { color: rgba(255,255,255,0.5); }
+
+  #contact h2 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-tagline {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 2.8rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .contact-direct {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .contact-btn {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .contact-btn-primary {
+    background: var(--white);
+    color: var(--accent);
+  }
+
+  .contact-btn-primary:hover { background: var(--cream); }
+
+  .contact-btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+
+  .contact-btn-outline:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
+
+  .contact-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto 3rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .form-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .form-input, .form-textarea {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--white);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    padding: 0.7rem 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+  .form-input:focus, .form-textarea:focus {
+    border-color: rgba(255,255,255,0.7);
+  }
+
+  .form-textarea { resize: vertical; min-height: 110px; }
+
+  .form-submit {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--white);
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover { background: var(--cream); }
+
+  footer {
+    padding: 2rem clamp(1.5rem, 5vw, 3rem);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+  }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: var(--ink-light);
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .contact-direct { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-name">Al Calderon</a>
+  <ul class="nav-links">
+    <li><a href="#summary">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#innovations">Innovations</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://img1.wsimg.com/blobby/go/a7b8f23f-ba2d-41a7-b976-4687a4eed5fe/downloads/b0097e15-d692-4f3e-a366-a9af6cf16233/AcalResDir.pdf" target="_blank" class="nav-download">Download Resume</a>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Open to new roles</div>
+    <h1 class="hero-headline">Al Calderon</h1>
+    <p class="hero-sub">Support Operations Leader | Global Team Scaling | AI and Automation Strategy</p>
+    <div class="hero-body">
+      <p class="summary-text fade-in">
+        I build support organizations that stop being a cost center and start driving real business impact.
+      </p>
+      <p class="summary-text fade-in">
+        Over 15 years, I’ve scaled 24/7 global teams through multiple acquisitions, built data frameworks that make performance visible, and closed the loop between customer signals and product decisions.
+      </p>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">15+</div>
+        <div class="hero-stat-label">Years in ops</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">70%</div>
+        <div class="hero-stat-label">Faster response times</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Acquisitions navigated</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Continents covered</div>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Contact me</a>
+      <a href="#experience" class="btn-secondary">My experience</a>
+    </div>
+  </div>
+</section>
+
+<div class="metrics-band">
+  <div>
+    <div class="metric-num">70%</div>
+    <div class="metric-label">Reduction in response time</div>
+  </div>
+  <div>
+    <div class="metric-num">50%</div>
+    <div class="metric-label">SLA adherence improvement</div>
+  </div>
+  <div>
+    <div class="metric-num">25%</div>
+    <div class="metric-label">Fewer repeat incidents</div>
+  </div>
+  <div>
+    <div class="metric-num">13%</div>
+    <div class="metric-label">MTTR reduction</div>
+  </div>
+</div>
+
+<section id="summary">
+  <div class="container">
+    <div class="section-label">Professional Summary</div>
+    <h2>Systems thinker.<br>Data driven operator.</h2>
+    <p class="summary-text fade-in">
+      My operating model starts with data. I design KPI frameworks that teams actually understand, OKRs that connect support performance to real business outcomes, and executive dashboards that turn operational noise into decisions. I've scaled follow the sun operations across three continents and led teams through four acquisitions, each time maintaining performance while everything else was changing.
+    </p>
+    <p class="summary-text fade-in">
+      I partner closely with Product, Engineering, and Customer Success to close the loop between customer signals and platform improvements. ITIL fundamentals combined with AI driven automation is how I build support infrastructure that scales without breaking.
+    </p>
+    <div class="expertise-pills">
+      <span class="pill accent">Enterprise B2B SaaS</span>
+      <span class="pill accent">Cloud Infrastructure & CDN</span>
+      <span class="pill accent">Cybersecurity</span>
+      <span class="pill">Healthcare Technology</span>
+      <span class="pill">Automotive & Consumer Research</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Work Experience</div>
+    <h2>Career history</h2>
+
+    <div class="job fade-in">
+      <div class="job-header">
+        <div class="job-title">Director, Global Customer Support</div>
+        <div class="job-tenure">Jul 2025 to Jan 2026</div>
+      </div>
+      <div class="job-company">Portnox · Austin, TX (Hybrid)</div>
+      <ul class="job-bullets">
+        <li>Directed global support across AMER, EMEA, and APAC. Built escalation frameworks, KPI models, and reporting dashboards from the ground up.</li>
+        <li>Designed enterprise engagement playbook including executive briefings, technical onboarding workflows, and platform walkthroughs.</li>
+        <li>Redesigned SLA frameworks and incident workflows driving a 70% reduction in response times and 50% increase in SLA adherence.</li>
+        <li>Standardized cross functional operations through playbooks, communication protocols, and workflow templates across distributed teams.</li>
+        <li>Translated complex operational data into executive insights using Salesforce, custom dashboards, and performance metrics.</li>
+      </ul>
+    </div>
+
+    <div class="job fade-in">
+      <div class="job-header">
+        <div class="job-title">Senior Manager, Customer Support</div>
+        <div class="job-tenure">Sep 2011 to Jul 2025</div>
+      </div>
+      <div class="job-company">Edgecast / Verizon / Yahoo / Edgio</div>
+      <div class="job-note">Progressed through five roles across four acquisitions: Incident Manager to Technical Manager to Sr. Technical Manager to Manager, Client Support & Managed Cloud Security to Senior Manager</div>
+      <ul class="job-bullets">
+        <li>Led global enterprise support organization through four acquisitions, maintaining operational stability and customer trust throughout each transition.</li>
+        <li>Built true follow the sun model enabling 24/7 coverage with seamless regional handoffs across AMER, EMEA, and APAC.</li>
+        <li>Optimized SLA frameworks and incident workflows aligned with enterprise KPIs, improved MTTR by 13% and SLA adherence by 10%.</li>
+        <li>Served as strategic bridge between Support, Product, and Engineering, translated recurring customer issues into product fixes, reducing repeat incidents by 25%.</li>
+        <li>Developed KPI dashboards and performance analytics enabling data driven decisions across volume trends, MTTR, SLA adherence, and escalation rates.</li>
+        <li>Led Major Incident Management for enterprise outages, coordinating cross functional recovery and standardized post incident reviews.</li>
+        <li>Drove ServiceNow platform enhancements as Business Owner, introducing automation to reduce manual workflows.</li>
+        <li>Established scalable onboarding and training programs that accelerated ramp time and improved case quality across distributed teams.</li>
+      </ul>
+    </div>
+
+    <div class="job fade-in">
+      <div class="job-header">
+        <div class="job-title">Technical Service Analyst</div>
+        <div class="job-tenure">May 2006 to Sep 2011</div>
+      </div>
+      <div class="job-company">Edmunds · Santa Monica, CA</div>
+      <ul class="job-bullets">
+        <li>Introduced ITIL best practices for Incident, Problem, Change, and Configuration Management, established the foundation for the IT service management framework.</li>
+        <li>Chaired Change Advisory Board meetings, approving 200+ critical changes with minimal business disruption.</li>
+        <li>Led root cause analysis initiatives that reduced revenue impacting incidents by 25% and improved system stability.</li>
+        <li>Automated system health monitoring using JavaScript and custom tools, reducing after hours support load.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="innovations">
+  <div class="container">
+    <div class="section-label">Innovation Highlights</div>
+    <h2>Built, not just managed</h2>
+    <p style="font-size:1rem; color:var(--ink-light); margin-bottom:2.5rem; max-width:600px;">Tools I've designed and shipped, not side projects, but solutions that ran in production and moved the metrics.</p>
+    <div class="innovations-grid">
+
+      <div class="innovation-card fade-in">
+  <div class="innovation-tag">Operations</div>
+  <div class="innovation-title">The Microscope, Real Time SLA Dashboard</div>
+  <div class="innovation-desc">
+    Built with Google App Script. Became the team's primary performance management tool. Drove 10% SLA improvement and 13% faster incident response.
+  </div>
+  <img src="images/Content-Creator-Project.png" alt="The Microscope dashboard example" class="innovation-image">
+</div>
+      <div class="innovation-card fade-in">
+  <div class="innovation-tag">Analytics</div>
+  <div class="innovation-title">Automated Team Workload Analysis</div>
+  <div class="innovation-desc">
+    Google App Script + Sheets tool that tracked work type per engineer, surfaced cherry picking patterns, and revealed a 15% imbalance in bug fix distribution across the team.
+  </div>
+  <img src="images/workload.png" alt="Team workload analysis dashboard" class="innovation-image">
+</div>
+      <div class="innovation-card fade-in">
+  <div class="innovation-tag">Infrastructure</div>
+  <div class="innovation-title">API Driven CDN Benchmarking</div>
+  <div class="innovation-desc">
+    Built an API to automate retrieval of CDN response time data, then benchmarked performance against top competitors, directly initiating projects for image compression and caching improvements.
+  </div>
+  <img src="images/CDNBench.png" alt="CDN benchmarking performance comparison" class="innovation-image">
+</div>
+      <div class="innovation-card fade-in">
+  <div class="innovation-tag">Network Ops</div>
+  <div class="innovation-title">Server Uptime Automation</div>
+  <div class="innovation-desc">
+    API driven collection of global server status data, aggregated by region and data center. Identified underperforming locations and drove a 15% reduction in overall server downtime.
+  </div>
+  <img src="images/network-uptime.png" alt="Global server uptime analysis" class="innovation-image">
+</div>
+
+      <div class="innovation-card fade-in">
+  <div class="innovation-tag">AI & Automation</div>
+  <div class="innovation-title">AI Powered Job Search Pipeline</div>
+  <div class="innovation-desc">
+    Built an end to end system that aggregates roles, evaluates fit against my experience, scores and prioritizes opportunities, and surfaces next actions through a live dashboard, replacing manual job searching.
+  </div>
+  <img src="images/job-dashboard.png" alt="AI job search dashboard" class="innovation-image">
+</div>
+
+<div class="innovation-card fade-in">
+  <div class="innovation-tag">Intelligence</div>
+  <div class="innovation-title">News Intelligence Automation</div>
+  <div class="innovation-desc">
+    Built a pipeline that ingests news data, classifies sentiment, and surfaces trends for faster decision making. Transforms unstructured articles into structured insights that can be tracked and acted on.
+  </div>
+  <img src="images/News-Analyzer.png" alt="News intelligence sentiment analysis dashboard" class="innovation-image">
+</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Skills</div>
+    <h2>Core capabilities</h2>
+    <div class="skills-grid fade-in">
+      <div>
+        <div class="skill-group-label">Leadership & Strategy</div>
+        <ul class="skill-list">
+          <li>Support Operations Architecture</li>
+          <li>Global Team Leadership</li>
+          <li>Organizational Transformation</li>
+          <li>Escalation Framework Design</li>
+          <li>SLA / SLO Management</li>
+          <li>KPI Design & OKR Frameworks</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skill-group-label">Process & Methodology</div>
+        <ul class="skill-list">
+          <li>Incident / Problem / Change Mgmt</li>
+          <li>ITIL Aligned Operations</li>
+          <li>Major Incident Management</li>
+          <li>Post Incident Review</li>
+          <li>AI & Automation Integration</li>
+          <li>Cross Functional Collaboration</li>
+        </ul>
+      </div>
+      <div>
+        <div class="skill-group-label">Platforms & Tools</div>
+        <ul class="skill-list">
+          <li>ServiceNow (Business Owner)</li>
+          <li>Salesforce / Zendesk / Jira</li>
+          <li>Grafana / Power BI</li>
+          <li>Google App Script / Sheets</li>
+          <li>Confluence / Slack</li>
+          <li>HubSpot</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-label">Education & Certifications</div>
+    <h2>Credentials</h2>
+    <div class="fade-in">
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">DeVry University, Long Beach</div>
+          <div class="edu-detail">Computer Information Systems</div>
+        </div>
+        <span class="edu-badge">Degree</span>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">Generative AI for Data Analysts</div>
+          <div class="edu-detail">Specialization Certificate</div>
+        </div>
+        <span class="edu-badge">Certificate</span>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">Google Cloud</div>
+          <div class="edu-detail">Security & Operations · Digital Transformation · Infrastructure & App Modernization · Data & Innovation · Data Analytics</div>
+        </div>
+        <span class="edu-badge">5 Certs</span>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-name">ServiceNow IT Leadership</div>
+          <div class="edu-detail">LinkedIn Learning Professional Certificate</div>
+        </div>
+        <span class="edu-badge">Certificate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <h2 class="fade-in">Need someone who can step in,<br>take ownership, and actually<br>move things forward?</h2>
+    <br>
+    
+    <div class="contact-direct fade-in">
+      <a href="mailto:al@alcal.work" class="contact-btn contact-btn-primary">al@alcal.work</a>
+      <a href="https://www.linkedin.com/in/al-calderon-87808b4/" target="_blank" class="contact-btn contact-btn-outline">LinkedIn</a>
+      <a href="https://img1.wsimg.com/blobby/go/a7b8f23f-ba2d-41a7-b976-4687a4eed5fe/downloads/c94dd049-ef05-408a-a3d0-568abb3a6ea1/AlCalResDir.pdf" target="_blank" class="contact-btn contact-btn-outline">Download Resume</a>
+    </div>
+    <div class="contact-divider"></div>
+    <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="fname">First name</label>
+          <input class="form-input" type="text" id="fname" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lname">Last name</label>
+          <input class="form-input" type="text" id="lname" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="company">Company</label>
+          <input class="form-input" type="text" id="company" placeholder="Acme Corp">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-textarea" id="message" placeholder="What are you working on?" required></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="submit-btn">Send message</button>
+      <p id="form-confirm" style="display:none; font-size:0.88rem; color:rgba(255,255,255,0.7); margin-top:0.5rem; text-align:center;">Message received. I'll get back to you.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name">Al Calderon</span>
+  <span class="footer-copy">Support Operations Leader · Austin, TX · © 2026</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-b
