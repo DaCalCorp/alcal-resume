@@ -284,7 +284,7 @@
     font-weight: 500;
     letter-spacing: 0.05em;
     padding: 0.4rem 0.9rem;
-    border-radius: 2px;
+    border-radius: 999px;
     border: 1px solid var(--rule);
     color: var(--ink-mid);
     background: var(--white);
@@ -437,6 +437,78 @@
   }
 
   .skill-list li:last-child { border-bottom: none; }
+
+  /* Tiered skills layout */
+  .skill-category {
+    margin-bottom: 2.2rem;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .skill-category:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .skill-category-header .skill-group-label {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .skill-tier {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  .skill-tier-expert {
+    background: #e6f5ee;
+    color: #1a6640;
+    border: 1px solid #b8dfc8;
+  }
+
+  .skill-tier-proficient {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid #b8cfe0;
+  }
+
+  .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-sublabel {
+    font-size: 0.72rem;
+    color: var(--ink-light);
+    font-weight: 400;
+  }
+
+  .skill-tier-group {
+    margin-top: 1rem;
+  }
+
+  .skill-tier-row-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.5rem;
+  }
 
   .edu-item {
     display: flex;
@@ -942,40 +1014,94 @@ My approach is practical. AI should make support teams faster and more effective
   <div class="container">
     <div class="section-label">Skills</div>
     <h2>Core capabilities</h2>
-    <div class="skills-grid fade-in">
-      <div>
-        <div class="skill-group-label">Leadership & Strategy</div>
-        <ul class="skill-list">
-          <li>Support Operations Architecture</li>
-          <li>Global Team Leadership</li>
-          <li>Organizational Transformation</li>
-          <li>Escalation Framework Design</li>
-          <li>SLA / SLO Management</li>
-          <li>KPI Design & OKR Frameworks</li>
-        </ul>
+
+    <div class="fade-in">
+
+      <!-- Leadership & Strategy -->
+      <div class="skill-category">
+        <div class="skill-category-header">
+          <div class="skill-group-label">Leadership &amp; Strategy</div>
+          <span class="skill-tier skill-tier-expert">Expert</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Support Operations Architecture</span>
+          <span class="pill">Global Team Leadership</span>
+          <span class="pill">Organizational Transformation</span>
+          <span class="pill">Escalation Framework Design</span>
+          <span class="pill">SLA / SLO Management</span>
+          <span class="pill">KPI &amp; OKR Framework Design</span>
+          <span class="pill">Vendor Management</span>
+        </div>
       </div>
-      <div>
-        <div class="skill-group-label">Process & Methodology</div>
-        <ul class="skill-list">
-          <li>Incident / Problem / Change Mgmt</li>
-          <li>ITIL Aligned Operations</li>
-          <li>Major Incident Management</li>
-          <li>Post Incident Review</li>
-          <li>AI & Automation Integration</li>
-          <li>Cross Functional Collaboration</li>
-        </ul>
+
+      <!-- Process & Methodology -->
+      <div class="skill-category">
+        <div class="skill-category-header">
+          <div class="skill-group-label">Process &amp; Methodology</div>
+          <span class="skill-tier skill-tier-expert">Expert</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Incident / Problem / Change Mgmt</span>
+          <span class="pill">ITIL-Aligned Operations</span>
+          <span class="pill">Major Incident Management</span>
+          <span class="pill">Post-Incident Review</span>
+          <span class="pill">Cross-Functional Collaboration</span>
+        </div>
       </div>
-      <div>
-        <div class="skill-group-label">Platforms & Tools</div>
-        <ul class="skill-list">
-          <li>ServiceNow (Business Owner)</li>
-          <li>Salesforce / Zendesk / Jira</li>
-          <li>Grafana / Power BI</li>
-          <li>Google App Script / Sheets</li>
-          <li>Confluence / Slack</li>
-          <li>HubSpot</li>
-        </ul>
+
+      <!-- AI & Automation -->
+      <div class="skill-category">
+        <div class="skill-category-header">
+          <div class="skill-group-label">AI &amp; Automation</div>
+          <span class="skill-tier skill-tier-proficient">Proficient</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">AI &amp; Automation Integration</span>
+          <span class="pill">Gemini API / LLM Integration</span>
+          <span class="pill">AI-First Development Cycle</span>
+          <span class="pill">Google Apps Script</span>
+          <span class="pill">Python <span class="skill-sublabel">— Familiar</span></span>
+        </div>
       </div>
+
+      <!-- Platforms & Tools -->
+      <div class="skill-category">
+        <div class="skill-category-header">
+          <div class="skill-group-label">Platforms &amp; Tools</div>
+        </div>
+
+        <div class="skill-tier-group">
+          <div class="skill-tier-row-label">Expert</div>
+          <div class="skill-pills">
+            <span class="pill">ServiceNow <span class="skill-sublabel">— Business Owner</span></span>
+            <span class="pill">Google Sheets / Apps Script</span>
+          </div>
+        </div>
+
+        <div class="skill-tier-group">
+          <div class="skill-tier-row-label">Proficient</div>
+          <div class="skill-pills">
+            <span class="pill">Salesforce</span>
+            <span class="pill">Zendesk</span>
+            <span class="pill">Jira</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">Confluence</span>
+            <span class="pill">Slack</span>
+          </div>
+        </div>
+
+        <div class="skill-tier-group">
+          <div class="skill-tier-row-label">Familiar</div>
+          <div class="skill-pills">
+            <span class="pill">Power BI</span>
+            <span class="pill">HubSpot</span>
+            <span class="pill">Citrix</span>
+            <span class="pill">Catchpoint</span>
+            <span class="pill">Streamlit</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1024,7 +1150,7 @@ My approach is practical. AI should make support teams faster and more effective
     <br>
 
     <div class="contact-direct fade-in">
-      <a href="mailto:al@alcal.work" class="contact-btn contact-btn-primary">al@alcal.work</a>
+      <a href="/cdn-cgi/l/email-protection#5534391534393634397b223a273e" class="contact-btn contact-btn-primary"><span class="__cf_email__" data-cfemail="0e6f624e6f626d6f622079617c65">[email&#160;protected]</span></a>
       <a href="https://www.linkedin.com/in/al-calderon-87808b4/" target="_blank" class="contact-btn contact-btn-outline">LinkedIn</a>
       <a href="/resume/alresume.pdf" target="_blank" download class="contact-btn contact-btn-outline">Download Resume</a>
     </div>
@@ -1070,7 +1196,7 @@ My approach is practical. AI should make support teams faster and more effective
   <span class="footer-copy">Support Operations Leader · Austin, TX · © 2026</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -1091,16 +1217,3 @@ My approach is practical. AI should make support teams faster and more effective
     const form = e.target;
 
     btn.disabled = true;
-    btn.textContent = 'Message Sent';
-    confirm.style.display = 'block';
-
-    form.reset();
-
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = 'Send message';
-    }, 2500);
-  }
-</script>
-</body>
-</html>
